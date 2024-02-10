@@ -1,0 +1,202 @@
+@import url(./fonts.css);
+@import url(./reset-normalize.css);
+@import url(./support.css);
+@import url(./aio.css);
+
+header,
+main,
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  padding: 40px 0px 100px 0px;
+  gap: 120px;
+}
+header > .top-bar button {
+  display: none;
+}
+header .title button {
+  width: 210px;
+  height: 50px;
+  border-radius: 2px;
+  background: rgba(255, 100, 100, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  font-family: "Heebo-Medium";
+}
+header button:hover {
+  background: rgba(0, 168, 204, 1);
+}
+
+/* Main */
+/* Section-Posts */
+.section_posts {
+  background: rgba(237, 247, 250, 1);
+  padding: 30px 0px;
+}
+.section_posts button {
+  font-family: "Heebo-Regular";
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 168, 204, 1);
+}
+.section_posts .card {
+  width: 418px;
+  height: 295px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  padding: 25px 20px 0px 20px;
+}
+.section_posts .date {
+  font-size: 18px;
+}
+.section_posts .v-line {
+  height: 21px;
+  border-right: 1px solid rgba(0, 0, 0, 1);
+}
+
+/* Section-Works */
+.section_works {
+  padding: 30px 0px 80px 0px;
+}
+.section_works h3 {
+  font-size: 30px;
+}
+
+.section_works .description {
+  width: 560px;
+}
+.section_works button {
+  width: 60px;
+  height: 25px;
+  border-radius: 16px;
+  background: rgba(20, 40, 80, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: "Heebo-Black";
+  font-size: 18px;
+}
+.section_works .h-line {
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+/* Footer */
+footer {
+  padding: 20px 0px 60px 0px;
+}
+footer a {
+  font-family: "Heebo-Regular";
+  font-size: 14px;
+  color: rgba(33, 36, 61, 1);
+}
+
+/* Medea Query */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    gap: 40px !important;
+  }
+  header > .top-bar button {
+    display: block !important;
+  }
+
+  header > .top-bar nav {
+    display: none !important;
+  }
+  header > .top-bar:hover nav {
+    display: block !important;
+  }
+  header nav {
+    animation: animate 8s alternate infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(-40px);
+    }
+    100% {
+      transform: translateX(-80px);
+    }
+  }
+  header > .info {
+    width: 100% !important;
+    position: relative;
+    padding-top: 220px;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  header > .info > .title {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  header h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  header .info p {
+    text-align: center;
+  }
+  header > .info img {
+    width: 180px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+
+  /* Main */
+  .cards {
+    width: 380px !important;
+  }
+  /* Section-Posts */
+  .section_posts .top-bar button {
+    display: none !important;
+  }
+  .section_posts .top-bar {
+    justify-content: center !important;
+  }
+  .section_posts .top-bar h5 {
+    font-size: 18px;
+  }
+  .section_posts .cards {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .section_posts .cards h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  /* Section-Works */
+  .section_works h5 {
+    text-align: center;
+  }
+
+  .section_works > .cards .card:nth-child(2) {
+    display: none;
+  }
+  .section_works > .cards .card:nth-child(3) {
+    display: none;
+  }
+  .section_works .description {
+    width: 340px;
+  }
+  .section_works .card-info {
+    flex-direction: column !important;
+  }
+  .section_works .card img {
+    width: 380px;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 40px;
+  }
+}
